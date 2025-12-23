@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Website - Home</title>
+    <meta name="description" content="A sample website for testing HTML to Twig conversion">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="styles/custom.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header" id="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="../assets/img/logo.png" alt="Company Logo">
+            </a>
+
+            <!-- Main Navigation -->
+            <nav class="main-nav" aria-label="Main Navigation">
+                <ul class="nav-menu">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: url('../images/hero-bg.jpg');">
+        <div class="container">
+            <h1>Welcome to Our Website</h1>
+            <p>We create amazing digital experiences</p>
+            <a href="contact.html" class="btn btn-primary">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="site-main" id="content" role="main">
+        <div class="container">
+            <!-- Services Section -->
+            <section class="services">
+                <h2>Our Services</h2>
+                <div class="row">
+                    <article class="service-card">
+                        <img src="../images/service-1.png" alt="Web Development">
+                        <h3>Web Development</h3>
+                        <p>Custom websites built with modern technologies.</p>
+                    </article>
+                    <article class="service-card">
+                        <img src="../images/service-2.png" alt="Mobile Apps">
+                        <h3>Mobile Apps</h3>
+                        <p>Native and cross-platform mobile applications.</p>
+                    </article>
+                    <article class="service-card">
+                        <img src="../images/service-3.png" alt="UI/UX Design">
+                        <h3>UI/UX Design</h3>
+                        <p>Beautiful and intuitive user interfaces.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Team Section -->
+            <section class="team">
+                <h2>Our Team</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="img/team/john.jpg" alt="John Doe">
+                        <h4>John Doe</h4>
+                        <p>CEO & Founder</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="img/team/jane.jpg" alt="Jane Smith">
+                        <h4>Jane Smith</h4>
+                        <p>Lead Developer</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="img/team/mike.jpg" alt="Mike Johnson">
+                        <h4>Mike Johnson</h4>
+                        <p>Designer</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" role="complementary">
+        <div class="widget">
+            <h3>Recent Posts</h3>
+            <ul>
+                <li><a href="blog/post-1.html">How to Build a Website</a></li>
+                <li><a href="blog/post-2.html">Design Tips for 2024</a></li>
+                <li><a href="blog/post-3.html">Mobile-First Development</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-nav">
+                <ul class="menu">
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <p>&copy; 2024 Company Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../js/scripts.js"></script>
+    <script src="scripts/custom.js"></script>
+</body>
+</html>

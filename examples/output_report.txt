@@ -1,0 +1,114 @@
+======================================================================
+HTML TO WORDPRESS CONVERSION REPORT
+======================================================================
+
+Input:  /home/user/HTML-to-Twig/examples/sample.html
+Output: /home/user/HTML-to-Twig/examples/output.php
+Theme:  mysite
+
+----------------------------------------------------------------------
+ASSET CONVERSIONS
+----------------------------------------------------------------------
+  [IMG]
+    Before: ../assets/img/logo.png
+    After:  <?php echo esc_url(get_template_directory_uri() . '/images/logo.png'); ?>
+
+  [IMG]
+    Before: ../images/service-1.png
+    After:  <?php echo esc_url(get_template_directory_uri() . '/images/service-1.png'); ?>
+
+  [IMG]
+    Before: ../images/service-2.png
+    After:  <?php echo esc_url(get_template_directory_uri() . '/images/service-2.png'); ?>
+
+  [IMG]
+    Before: ../images/service-3.png
+    After:  <?php echo esc_url(get_template_directory_uri() . '/images/service-3.png'); ?>
+
+  [IMG]
+    Before: img/team/john.jpg
+    After:  <?php echo esc_url(get_template_directory_uri() . '/images/team/john.jpg'); ?>
+
+  [IMG]
+    Before: img/team/jane.jpg
+    After:  <?php echo esc_url(get_template_directory_uri() . '/images/team/jane.jpg'); ?>
+
+  [IMG]
+    Before: img/team/mike.jpg
+    After:  <?php echo esc_url(get_template_directory_uri() . '/images/team/mike.jpg'); ?>
+
+  [CSS]
+    Before: ../assets/css/bootstrap.min.css
+    After:  <?php echo esc_url(get_template_directory_uri() . '/css/bootstrap.min.css'); ?>
+
+  [CSS]
+    Before: ../css/styles.css
+    After:  <?php echo esc_url(get_template_directory_uri() . '/css/styles.css'); ?>
+
+  [CSS]
+    Before: styles/custom.css
+    After:  <?php echo esc_url(get_template_directory_uri() . '/css/custom.css'); ?>
+
+  [JS]
+    Before: ../assets/js/jquery.min.js
+    After:  <?php echo esc_url(get_template_directory_uri() . '/js/jquery.min.js'); ?>
+
+  [JS]
+    Before: ../js/scripts.js
+    After:  <?php echo esc_url(get_template_directory_uri() . '/js/scripts.js'); ?>
+
+  [JS]
+    Before: scripts/custom.js
+    After:  <?php echo esc_url(get_template_directory_uri() . '/js/custom.js'); ?>
+
+  [FAVICON]
+    Before: ../images/favicon.ico
+    After:  <?php echo esc_url(get_template_directory_uri() . '/images/favicon.ico'); ?>
+
+----------------------------------------------------------------------
+TEMPLATE PARTS SUGGESTIONS
+----------------------------------------------------------------------
+  get_template_part('header')
+    Reason: Detected header element(s)
+
+  get_template_part('footer')
+    Reason: Detected footer element(s)
+
+  get_template_part('sidebar')
+    Reason: Detected .sidebar element(s)
+
+  get_template_part('content')
+    Reason: Detected main element(s)
+
+----------------------------------------------------------------------
+LOOP CONVERSIONS
+----------------------------------------------------------------------
+  Element: Navigation menu: Main Nav
+    Type: wp_nav_menu()
+
+  Element: Navigation menu: Menu
+    Type: wp_nav_menu()
+
+  Element: Post list in 'row'
+    Type: WordPress The Loop (while have_posts())
+
+----------------------------------------------------------------------
+MANUAL REVIEW SUGGESTIONS
+----------------------------------------------------------------------
+  1. Register menu location 'main_nav' in functions.php:
+    register_nav_menus(array('main_nav' => __('Main Nav', 'mysite')));
+  2. Register menu location 'menu' in functions.php:
+    register_nav_menus(array('menu' => __('Menu', 'mysite')));
+  3. Consider extracting header to template-parts/header.php
+  4. Consider extracting footer to template-parts/footer.php
+  5. Consider extracting .sidebar to template-parts/sidebar.php
+  6. Consider extracting main to template-parts/content.php
+  7. Replace repeated articles in 'row' with WordPress The Loop:
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+        <?php get_template_part('template-parts/content', get_post_type()); ?>
+    <?php endwhile; endif; ?>
+  8. Consider using a loop for repeated elements in 'team-grid' (3 similar children found)
+
+======================================================================
+END OF REPORT
+======================================================================

@@ -1,3 +1,38 @@
+Metadata-Version: 2.4
+Name: html2twig
+Version: 1.0.0
+Summary: CLI tool to convert HTML templates to Twig (Symfony) or WordPress PHP templates
+Author: HTML2Twig Contributors
+License: MIT
+Project-URL: Homepage, https://github.com/Piqzaa/HTML-to-Twig
+Project-URL: Repository, https://github.com/Piqzaa/HTML-to-Twig
+Project-URL: Issues, https://github.com/Piqzaa/HTML-to-Twig/issues
+Keywords: html,twig,symfony,wordpress,converter,template
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: Topic :: Text Processing :: Markup :: HTML
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: beautifulsoup4>=4.12.0
+Requires-Dist: lxml>=4.9.0
+Requires-Dist: click>=8.1.0
+Requires-Dist: rich>=13.0.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+
 # HTML2Twig
 
 A powerful CLI tool to convert HTML templates to **Twig** (Symfony) or **WordPress PHP** templates.
