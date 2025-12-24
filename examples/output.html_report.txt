@@ -1,0 +1,111 @@
+======================================================================
+HTML TO TWIG CONVERSION REPORT
+======================================================================
+
+Input:  /home/user/HTML-to-Twig/examples/sample.html
+Output: /home/user/HTML-to-Twig/examples/output.html.twig
+Layout: base
+
+----------------------------------------------------------------------
+ASSET CONVERSIONS
+----------------------------------------------------------------------
+  [IMG]
+    Before: ../assets/img/logo.png
+    After:  {{ asset('images/logo.png') }}
+
+  [IMG]
+    Before: ../images/service-1.png
+    After:  {{ asset('images/service-1.png') }}
+
+  [IMG]
+    Before: ../images/service-2.png
+    After:  {{ asset('images/service-2.png') }}
+
+  [IMG]
+    Before: ../images/service-3.png
+    After:  {{ asset('images/service-3.png') }}
+
+  [IMG]
+    Before: img/team/john.jpg
+    After:  {{ asset('images/team/john.jpg') }}
+
+  [IMG]
+    Before: img/team/jane.jpg
+    After:  {{ asset('images/team/jane.jpg') }}
+
+  [IMG]
+    Before: img/team/mike.jpg
+    After:  {{ asset('images/team/mike.jpg') }}
+
+  [CSS]
+    Before: ../assets/css/bootstrap.min.css
+    After:  {{ asset('css/bootstrap.min.css') }}
+
+  [CSS]
+    Before: ../css/styles.css
+    After:  {{ asset('css/styles.css') }}
+
+  [CSS]
+    Before: styles/custom.css
+    After:  {{ asset('css/custom.css') }}
+
+  [JS]
+    Before: ../assets/js/jquery.min.js
+    After:  {{ asset('js/jquery.min.js') }}
+
+  [JS]
+    Before: ../js/scripts.js
+    After:  {{ asset('js/scripts.js') }}
+
+  [JS]
+    Before: scripts/custom.js
+    After:  {{ asset('js/custom.js') }}
+
+  [FAVICON]
+    Before: ../images/favicon.ico
+    After:  {{ asset('images/favicon.ico') }}
+
+----------------------------------------------------------------------
+BLOCK SUGGESTIONS
+----------------------------------------------------------------------
+  {% block header %}
+    Reason: Detected header element(s)
+
+  {% block footer %}
+    Reason: Detected footer element(s)
+
+  {% block sidebar %}
+    Reason: Detected .sidebar element(s)
+
+  {% block content %}
+    Reason: Detected main element(s)
+
+  {% block title %}
+    Reason: Detected title element(s)
+
+  {% block stylesheets %}
+    Reason: Detected head element(s)
+
+  {% block javascripts %}
+    Reason: Detected body element(s)
+
+----------------------------------------------------------------------
+LOOP CONVERSIONS
+----------------------------------------------------------------------
+  Element: <nav> / <ul> menu
+    {% for item in main_nav_items %}
+
+  Element: <nav> / <ul> menu
+    {% for item in menu_items %}
+
+----------------------------------------------------------------------
+MANUAL REVIEW SUGGESTIONS
+----------------------------------------------------------------------
+  1. Review the 'main_nav' navigation loop and adjust variable names as needed.
+  2. Review the 'menu' navigation loop and adjust variable names as needed.
+  3. Consider using a for loop for repeated elements in 'row' (3 similar children found)
+  4. Consider using a for loop for repeated elements in 'team-grid' (3 similar children found)
+
+======================================================================
+END OF REPORT
+======================================================================

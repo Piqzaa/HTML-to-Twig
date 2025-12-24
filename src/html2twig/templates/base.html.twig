@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Welcome{% endblock %}</title>
+
+    {% block meta %}
+    <meta name="description" content="{% block meta_description %}{% endblock %}">
+    {% endblock %}
+
+    {% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    {% endblock %}
+</head>
+<body class="{% block body_class %}{% endblock %}">
+    {% block header %}
+    <header class="site-header">
+        <div class="container">
+            {% block logo %}
+            <a href="{{ path('homepage') }}" class="logo">
+                <img src="{{ asset('images/logo.png') }}" alt="Logo">
+            </a>
+            {% endblock %}
+
+            {% block navigation %}
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    {% for item in menu_items %}
+                    <li class="{{ item.active ? 'active' : '' }}">
+                        <a href="{{ item.url }}">{{ item.label }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+            {% endblock %}
+        </div>
+    </header>
+    {% endblock %}
+
+    {% block flash_messages %}
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+        <div class="alert alert-{{ label }}">
+            {{ message }}
+        </div>
+        {% endfor %}
+    {% endfor %}
+    {% endblock %}
+
+    <main class="site-main">
+        {% block body %}{% endblock %}
+    </main>
+
+    {% block sidebar %}{% endblock %}
+
+    {% block footer %}
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; {{ "now"|date("Y") }} Your Company. All rights reserved.</p>
+        </div>
+    </footer>
+    {% endblock %}
+
+    {% block javascripts %}
+    <script src="{{ asset('js/app.js') }}"></script>
+    {% endblock %}
+</body>
+</html>
